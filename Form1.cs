@@ -28,7 +28,7 @@ namespace WindowsFormsApp14
             string[] filePaths = Directory.GetFiles(@"C:\Terminal_razmjena\Prenos_na_terminal");
             if (filePaths.Length == 0)
             {
-                MessageBox.Show("Niste exportovali drugi export iz IMIS-a!");
+                MessageBox.Show("Niste exportovali drugi export!");
                 return;
             }
             XElement xFileRoot = XElement.Load(@"C:\Users\fakturno1\Desktop\New folder (4)\export.xml");
@@ -54,7 +54,7 @@ namespace WindowsFormsApp14
                 return;
             }
             File.Move(fileToCopy, destinationDirectory);
-            MessageBox.Show("Export je prebačen u folder za spajanje, sad exportujte drugi export iz IMIS-a");
+            MessageBox.Show("Export je prebačen u folder za spajanje, sad exportujte drugi export");
             button2.Enabled = false;
             button1.Enabled = true;
         }
